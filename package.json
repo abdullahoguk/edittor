@@ -1,0 +1,35 @@
+{
+  "name": "edittor",
+  "version": "0.1.0",
+  "description": "A minimal, reusable editor for reels and short videos: collages, beat-synced cuts, per-aspect-ratio layouts, color grading with 3D LUTs, animated text, and Claude integration via MCP.",
+  "license": "GPL-3.0-only",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun scripts/dev.ts",
+    "dev:server": "bun --watch server/index.ts",
+    "dev:web": "bun --bun node_modules/vite/bin/vite.js --config web/vite.config.ts",
+    "build": "bun --bun node_modules/vite/bin/vite.js build --config web/vite.config.ts",
+    "start": "bun server/index.ts",
+    "mcp": "bun mcp/index.ts",
+    "typecheck": "tsc --noEmit -p ."
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "lucide-react": "1.67.0",
+    "mediabunny": "1.65.1",
+    "react": "19.1.10",
+    "react-dom": "19.1.10",
+    "sharp": "0.35.5",
+    "zod": "4.6.7",
+    "zustand": "5.0.16"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.4",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.2.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.5"
+  }
+}
